@@ -14,6 +14,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import redirect from 'redirect-action-middleware';
 import * as types from './types';
+import { handlePusherMessage, fetchSomeData, updateUserList } from './actions';
 
 const redirectActions = {
     [types.PUSHER_MESSAGE_SENT]: [
