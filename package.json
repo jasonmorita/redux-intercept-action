@@ -1,0 +1,54 @@
+{
+    "name": "redux-intercept-action",
+    "version": "0.1.2",
+    "description": "Middleware to intercept and redirect actions when they are dispatched.",
+    "main": "dist/index.js",
+    "repository": "https://github.com/jasonmorita/redux-intercept-action",
+    "scripts": {
+        "build": "babel src --out-dir dist --ignore '**/*.test.js','**/__mocks__/*'",
+        "lint": "eslint .",
+        "test": "jest src",
+        "prepublish": "npm run build"
+    },
+    "author": "Jason Morita",
+    "license": "MIT",
+    "dependencies": {
+        "jest-cli": "^20.0.3",
+        "lodash": "4.17.4"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.24.1",
+        "babel-eslint": "^7.2.3",
+        "babel-jest": "^20.0.3",
+        "babel-plugin-syntax-trailing-function-commas": "^6.22.0",
+        "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+        "babel-plugin-transform-es2015-parameters": "^6.24.1",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-plugin-transform-strict-mode": "^6.24.1",
+        "babel-preset-env": "^1.5.1",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "eslint": "^3.19.0",
+        "eslint-config-airbnb-base": "^11.2.0",
+        "eslint-plugin-import": "^2.2.0",
+        "jest": "^20.0.3"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "testPathIgnorePatterns": [
+            "/node_modules/",
+            "./dist"
+        ],
+        "collectCoverageFrom": [
+            "src/*.js"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "statements": 100,
+                "functions": 100,
+                "lines": 100
+            }
+        }
+    }
+}
