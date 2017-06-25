@@ -1,7 +1,7 @@
 import identity from 'lodash/identity';
 import redirectActions from '../';
 
-describe('Redirect action middlware', () => {
+describe('Intercept action middlware', () => {
     let redirect;
     let actionCreatorA;
     let actionCreatorB;

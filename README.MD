@@ -1,5 +1,5 @@
 # redux-intercept-action
-Middleware to intercept and redirect actions when they are dispatched.
+Middleware to intercept and redirect actions before they hit reducers.
 
 Useful for handling actions coming in asyncronously from outside your app.
 
@@ -7,7 +7,7 @@ For example, you have a [Pusher](https://pusher.com/) channel connection that is
 
 To use, configure the middleware with an object with the action TYPEs you would like to intercept and pass the middleware to `applyMiddleware`.
 
-Any time an action is dispatched with a TYPE that matches the TYPE in the map, that action will be forwarded to the `actionCreator`(s)
+When a dispatched action matches a TYPE in the config map, that action is forwarded to the `actionCreator`(s) specified for that TYPE.
 
 ```javascript
 import { createStore, applyMiddleware } from 'redux';
