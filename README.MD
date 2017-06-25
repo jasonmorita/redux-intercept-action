@@ -1,5 +1,5 @@
 # redux-intercept-action
-Middleware to intercept and redirect actions before they hit reducers.
+Redux middleware to intercept and redirect FSA actions before they hit reducers.
 
 Useful for handling actions coming in asyncronously from outside your app.
 
