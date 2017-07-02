@@ -1,6 +1,6 @@
 {
     "name": "redux-intercept-action",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Redux middleware to intercept and redirect FSA actions before they hit reducers.",
     "main": "dist/index.js",
     "repository": "https://github.com/jasonmorita/redux-intercept-action",
