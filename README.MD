@@ -13,7 +13,7 @@ When a dispatched action matches a TYPE in the config map, that action is forwar
 // store.js
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import redirect from 'redirect-action-middleware';
+import intercept from 'redux-intercept-action';
 import * as types from './types';
 import { handlePusherMessage, fetchSomeData, updateUserList } from './actions';
 
@@ -27,7 +27,7 @@ const redirectActions = {
 };
 
 const storeFactory = applyMiddleware(
-    redirect(redirectActions),
+    intercept(redirectActions),
     thunk,
 )(createStore);
 
