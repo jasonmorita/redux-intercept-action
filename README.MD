@@ -32,7 +32,7 @@ const storeFactory = applyMiddleware(
 )(createStore);
 
 // actions.js
-export const fetchSomeData = ({ payload { id }}) => (dispatch, getState) => {
+export const fetchSomeData = ({ payload: { id }}) => (dispatch, getState) => {
     const someData = await fetch('/api', id);
 
     dispatch({
