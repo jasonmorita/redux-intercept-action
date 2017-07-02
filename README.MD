@@ -10,6 +10,7 @@ To use, configure the middleware with an object with the action TYPEs you would 
 When a dispatched action matches a TYPE in the config map, that action is forwarded to the `actionCreator`(s) specified for that TYPE.
 
 ```javascript
+// store.js
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import redirect from 'redirect-action-middleware';
@@ -29,4 +30,17 @@ const storeFactory = applyMiddleware(
     redirect(redirectActions),
     thunk,
 )(createStore);
+
+// actions.js
+
+...
+
+export const fetchSomeData = ({ payload { id }}) => (dispatch, getState) => {
+    const someData = await fetch('/api', id);
+    
+    dispatch({
+      type: 'GOT_DATA',
+      payload: someData
+   });
+      
 ```
