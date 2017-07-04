@@ -15,8 +15,8 @@ describe('Intercept action middlware', () => {
         actionCreatorB = jest.fn();
 
         config = {
-            MEMBERSHIP_EVENT_MEMBERSHIP_ADDED_READY: [actionCreatorA, actionCreatorB],
-            MEMBERSHIP_EVENT_PARENT_UPDATED_READY: actionCreatorA,
+            EVENT_1: [actionCreatorA, actionCreatorB],
+            EVENT_2: actionCreatorA,
         };
 
         redirect = redirectActions(config);
@@ -25,7 +25,7 @@ describe('Intercept action middlware', () => {
     describe('Dispatch an array of actions present in the redirect config', () => {
         it('should dispatch an array of actions', () => {
             redirect(store)(identity)({
-                type: 'MEMBERSHIP_EVENT_MEMBERSHIP_ADDED_READY',
+                type: 'EVENT_1',
                 payload: {
                     id: 'abc-def-ghi',
                 },
@@ -39,7 +39,7 @@ describe('Intercept action middlware', () => {
     describe('Dispatch a single action present in the redirect config', () => {
         it('should dispatch single action', () => {
             redirect(store)(identity)({
-                type: 'MEMBERSHIP_EVENT_PARENT_UPDATED_READY',
+                type: 'EVENT_2',
                 payload: {
                     id: 'abc-def-ghi',
                 },
@@ -53,7 +53,7 @@ describe('Intercept action middlware', () => {
     describe('Skip dispatch because no action type found in config', () => {
         it('should dispatch an action we do not know about', () => {
             redirect(store)(identity)({
-                type: 'ACCESS_CONTROL_SET_STATUS_TYPES',
+                type: 'EVENT_3',
                 payload: {
                     id: 'abc-def-ghi',
                 },

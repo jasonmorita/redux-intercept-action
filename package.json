@@ -1,6 +1,6 @@
 {
     "name": "redux-intercept-action",
-    "version": "0.1.9",
+    "version": "0.2.0",
     "description": "Redux middleware to intercept and redirect FSA actions before they hit reducers.",
     "main": "dist/index.js",
     "repository": "https://github.com/jasonmorita/redux-intercept-action",
@@ -12,10 +12,6 @@
     },
     "author": "Jason Morita",
     "license": "MIT",
-    "dependencies": {
-        "jest-cli": "^20.0.3",
-        "lodash": "4.17.4"
-    },
     "devDependencies": {
         "babel-cli": "^6.24.1",
         "babel-core": "^6.24.1",
@@ -32,7 +28,9 @@
         "eslint": "^3.19.0",
         "eslint-config-airbnb-base": "^11.2.0",
         "eslint-plugin-import": "^2.2.0",
-        "jest": "^20.0.3"
+        "jest": "^20.0.3",
+        "jest-cli": "^20.0.3",
+        "lodash": "4.17.4"
     },
     "jest": {
         "testEnvironment": "node",
