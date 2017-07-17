@@ -1,6 +1,6 @@
 {
     "name": "redux-intercept-action",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Redux middleware to intercept and redirect FSA actions before they hit reducers.",
     "main": "dist/index.js",
     "repository": "https://github.com/jasonmorita/redux-intercept-action",
@@ -12,6 +12,13 @@
     },
     "author": "Jason Morita",
     "license": "MIT",
+    "keywords": [
+        "react",
+        "redux",
+        "state",
+        "intercept",
+        "action"
+    ],
     "devDependencies": {
         "babel-cli": "^6.24.1",
         "babel-core": "^6.24.1",
